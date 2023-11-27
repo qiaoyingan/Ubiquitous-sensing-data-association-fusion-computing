@@ -170,7 +170,9 @@ y_train = train['label']
 #X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, shuffle=True)
 model = XGBClassifier(scale_pos_weight=100, learning_rate=0.05, random_state=1000)
 #model.fit(X_train,y_train)
+print('== Start Training ==')
 model.fit(X,y)
+print('== End Training ==')
 
 resX = res[res.columns[2:-2]]
 probability = model.predict_proba(resX)[:,1]
@@ -224,11 +226,15 @@ df = get_MatchRecord(df_Imsi,df_Face, deltaSeconds)
 res = genFeature(df,df_Face,df_Imsi, deltaSeconds)
 
 resX = res[res.columns[2:]]
+print('== Start Testing ==')
 probability = model.predict_proba(resX)[:,1]
+print('== End Testing ==')
 res['probability'] = pd.Series(probability)
 
 xgb_temp = res.groupby("FaceLabel").apply(lambda t: t[t.probability==t.probability.max()].iloc[0])
 
 path_pred = result_folder + "CCF2021_run_pred_EvalA.csv"
-df_pred=pd.DataFrame(zip(xgb_temp['FaceLabel'], xgb_temp['Code']), columns=['人员编号', '特征码Top1']).sort_values(by=['人员编号'])
-df_pred.to_csv(path_pred,index=False)
+df_pred=pd.DataFrame(zip(xgb_temp['FaceLabel'], xgb_temp['Code']), columns=['人员编号', '特征码']).sort_values(by=['人员编号'])
+df_pred.to_csv(path_pred,index=False) 
+
+## lost data : P0433, P0592, P0286, P0304
