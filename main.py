@@ -110,7 +110,6 @@ if __name__ == '__main__':
                         co_appear_dict[(f, c)] += 1
                     else:
                         co_appear_dict[(f, c)] = 1
-                    # co_appear_dict = co_appear_dict.append({'Facelabel': f, 'Code': c}, ignore_index=True)
             # update the window 
             start_time += stride
             end_time += stride
