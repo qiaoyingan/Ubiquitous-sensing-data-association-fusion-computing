@@ -22,7 +22,7 @@ dict_label = {} # dict_label is used to identify the correct person-code relatio
 device_list = [] # device_list is used to record all the positions (Dxx)
 face_list, code_list = [], [] # xxxx_list is used to record the info of different positions
 window_size, stride = 100, 1000 # identify person and code appear in [time, time + window_size] as co-appear
-co_appear_df = None # record person and code appear in the same time block
+co_appear_dict = {} # record person and code appear in the same time block
 
 if __name__ == '__main__':
 
@@ -50,7 +50,7 @@ if __name__ == '__main__':
         face_list.append(df_Face.loc[df_Face['DeviceID'] == device])
         code_list.append(df_Imsi.loc[df_Imsi['DeviceID'] == device])
 
-    co_appear_df = pd.DataFrame({'Facelabel' : [], 'Code' : []})
+    # co_appear_dict = {'Facelabel' : [], 'Code' : []}
 
     for _ in range(len(device_list)): # Each position
 
@@ -86,7 +86,7 @@ if __name__ == '__main__':
                     else:
                         if face_list[_]['TimeStamp'].iloc[face_index] < end_time:
                             faces.append(face_list[_]['FaceLabel'].iloc[face_index])
-                            print("faces append {}".format(face_index))
+                            # print("faces append {}".format(face_index))
                             face_index += 1
                 if code_index < code_len:
                     if code_list[_]['TimeStamp'].iloc[code_index] < start_time:
@@ -95,7 +95,7 @@ if __name__ == '__main__':
                     else:
                         if code_list[_]['TimeStamp'].iloc[code_index] < end_time:
                             codes.append(code_list[_]['Code'].iloc[code_index])
-                            print("codes append {}".format(code_index))
+                            # print("codes append {}".format(code_index))
                             code_index += 1
                 if face_index >= face_len or code_index >= code_len:
                     break
@@ -103,15 +103,20 @@ if __name__ == '__main__':
                     and code_list[_]['TimeStamp'].iloc[code_index] >= end_time:
                     break
                 
+            a = 0
             for f in faces:
                 for c in codes:
-                    co_appear_df = co_appear_df.append({'Facelabel': f, 'Code': c}, ignore_index=True)
+                    if (f, c) in co_appear_dict:
+                        co_appear_dict[(f, c)] += 1
+                    else:
+                        co_appear_dict[(f, c)] = 1
+                    # co_appear_dict = co_appear_dict.append({'Facelabel': f, 'Code': c}, ignore_index=True)
             # update the window 
             start_time += stride
             end_time += stride
             if start_time > the_end:
                 break
-    print(co_appear_df)
+    print(co_appear_dict)
 
     # df_Face1 = df_Face.loc[df_Face['DeviceID'] == 'D02']
     # df_Imsi1 = df_Imsi[['DeviceID', 'TimeStamp', 'Code']]
@@ -125,27 +130,27 @@ if __name__ == '__main__':
     # print(df)
 
     # # 创建一个矩阵，按照FaceLabel和code进行分组，统计每个组合出现的次数
-    matrix = pd.pivot_table(df, index="FaceLabel", columns="Code", aggfunc="size", fill_value=0)
-    # 打印矩阵
-    print(matrix)
-    print(len(matrix))
-    print(matrix.columns)
-    print(matrix.loc['P0000'].idxmax())  # 根据行索引选择X行的最大值的列名称
-    print(matrix.iloc[0].idxmax())  # 根据行位置选择第一行的最大值的列名称，注意Python的索引从0开始
+    # matrix = pd.pivot_table(df, index="FaceLabel", columns="Code", aggfunc="size", fill_value=0)
+    # # 打印矩阵
+    # print(matrix)
+    # print(len(matrix))
+    # print(matrix.columns)
+    # print(matrix.loc['P0000'].idxmax())  # 根据行索引选择X行的最大值的列名称
+    # print(matrix.iloc[0].idxmax())  # 根据行位置选择第一行的最大值的列名称，注意Python的索引从0开始
 
-    matrix['Row_sum'] = matrix.apply(lambda x: x.sum(), axis=1)  # 按行求和，添加为新列
-    matrix.loc['Col_sum'] = matrix.apply(lambda x: x.sum())  # 按列求和，添加为新行
-    print(matrix)
-    ma = matrix
-    # print(matrix.loc['P1995', 'C012FmvR'])
-    # for index, row in matrix.iteritems():
+    # matrix['Row_sum'] = matrix.apply(lambda x: x.sum(), axis=1)  # 按行求和，添加为新列
+    # matrix.loc['Col_sum'] = matrix.apply(lambda x: x.sum())  # 按列求和，添加为新行
+    # print(matrix)
+    # ma = matrix
+    # # print(matrix.loc['P1995', 'C012FmvR'])
+    # # for index, row in matrix.iteritems():
 
-    print(ma.iloc[-1, -1])
-    for in1, (face, row) in enumerate(matrix.iterrows()):
-        for in2, n_pc in enumerate(row):
-            ma.iloc[in1, in2] = np.log(1 + n_pc) * np.log(1 + n_pc/(ma.iloc[-1, in2]-n_pc+1))*np.log(1 + n_pc/(ma.iloc[in1, -1]-n_pc+2))
-            # print(ma.iloc[in1, in2])
-    print(ma)
+    # print(ma.iloc[-1, -1])
+    # for in1, (face, row) in enumerate(matrix.iterrows()):
+    #     for in2, n_pc in enumerate(row):
+    #         ma.iloc[in1, in2] = np.log(1 + n_pc) * np.log(1 + n_pc/(ma.iloc[-1, in2]-n_pc+1))*np.log(1 + n_pc/(ma.iloc[in1, -1]-n_pc+2))
+    #         # print(ma.iloc[in1, in2])
+    # print(ma)
 
     # 计算公式 
     # np.log(1+ n_pc)*np.log(1+ n_pc/(n_c-n_pc+1))*np.log(1+ n_pc/(n_p-n_pc+2))
