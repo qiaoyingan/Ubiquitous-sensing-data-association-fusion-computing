@@ -23,8 +23,8 @@ def get_matchdf(device_list, face_list, code_list, window_size, stride):
         the_end = max(face_list[_]['TimeStamp'].iloc[-1], code_list[_]['TimeStamp'].iloc[-1])
 
         face_len, code_len = len(face_list[_]), len(code_list[_])
-        print(face_len, code_len)
-        print(" = = = ")
+        # print(face_len, code_len)
+        print("=== Position {} Begin ===".format(device_list[_]))
         face_index, code_index = 0, 0
         start_face, start_code = 0, 0  # record the start index in last window
 
@@ -33,8 +33,6 @@ def get_matchdf(device_list, face_list, code_list, window_size, stride):
         # 2、when current window have no more person, still count code?
         # 3、when current window have no more code, still count person?
         # Current approach: 1: +=1, 2: No, 3: No.
-
-        # * the algorithm seems to be very slow, especially set window_size & stride into small values.
 
         while 1:  # slide window [start_time, end_time], nxt window is [start_time + stride, end_time + stride]
             print(face_index, code_index, start_face, start_code, start_time, end_time)
@@ -78,6 +76,7 @@ def get_matchdf(device_list, face_list, code_list, window_size, stride):
             end_time += stride
             if start_time > the_end:
                 break
+        print("=== Position {} End ===".format(device_list[_]))
     return co_appear_dict
 
 def genFeature(l_TM, df_Face, df_Imsi):
@@ -87,7 +86,6 @@ def genFeature(l_TM, df_Face, df_Imsi):
     facelist = df_T['FaceLabel'].tolist()
     face_count = df_T['countT'].tolist()
 
-
     # 特征码的总次数
     df_M = df_Imsi.groupby('Code').count().reset_index()[['Code', 'DeviceID']]
     df_M.columns = ['Code', 'countM']
@@ -95,19 +93,28 @@ def genFeature(l_TM, df_Face, df_Imsi):
     code_count = df_M['countM'].tolist()
 
     # 汇总所有特征
+    # f : [n_p, n_c, n_pc], f 现在同时用于 score(f) 函数计算得分和 model(x) 中 x 的前三项， 其中 n_p, n_c 在这里取得是整个数据集出现的次数，此处需要修改
+    # 正确的修改方案应该是：
+    # 1、f 中 n_p, n_c 的计算不变，修改 res 中的计算，使得 res 中 n_p, n_c 的来源从 co_appear_dict 中获得；
+    #    此时，model 的输入 X 为 (整个数据集中的人脸出现次数，整个数据集中的编码出现次数，滑动窗口中共现次数，关联得分）
+    # 2、f 中 n_p, n_c 计算就按照 co_appear_dict 计算，那么 res 函数无需修改；
+    #   此时，model 输入 X 为（滑动窗口人脸出现次数， 滑动窗口编码出现次数，滑动窗口中共现次数，关联得分）
+    # 当 stride < window 时，滑动窗口出现次数比整个数据集出现次数多，因为两个window间有重叠
+    # 目前结果记录在 readme.md 中
+        
     f = []
     for i in range(len(l_TM)):
-        facelabel,code = l_TM[i][0],l_TM[i][1]
+        facelabel, code = l_TM[i][0], l_TM[i][1]
         if facelabel not in facelist:
             if code not in codelist:
-                f.append([l_TM[i][2],0,0])
+                f.append([l_TM[i][2], 0, 0])
             else:
                 f.append([l_TM[i][2], 0, code_count[codelist.index(code)]])
         else:
             if code not in codelist:
                 f.append([l_TM[i][2], face_count[facelist.index(facelabel)], 0])
             else:
-                f.append([l_TM[i][2],face_count[facelist.index(facelabel)],code_count[codelist.index(code)]])
+                f.append([l_TM[i][2], face_count[facelist.index(facelabel)], code_count[codelist.index(code)]])
     return f
 
 def score(res):
@@ -151,8 +158,8 @@ path_face = train_folder + 'CCF2021_run_record_p_Train.csv'
 dict_label = {} # dict_label is used to identify the correct person-code relation
 device_list = [] # device_list is used to record all the positions (Dxx)
 face_list, code_list = [], [] # xxxx_list is used to record the info of different positions
-window_size, stride = 20, 2 # identify person and code appear in [time, time + window_size] as co-appear
-co_appear_df = None # record person and code appear in the same time block
+window_size, stride = 100, 25 # identify person and code appear in [time, time + window_size] as co-appear
+co_appear_dict = {}
 
 if __name__ == '__main__':
 
@@ -184,11 +191,13 @@ if __name__ == '__main__':
     l = len(co_appear_dict)
     co_appear_l = []
     i = 0
-    for k,v in co_appear_dict.items():
-        co_appear_l.append([k[0],k[1],v])
+    for k, v in co_appear_dict.items():
+        co_appear_l.append([k[0], k[1], v])
         i += 1
 
+    print("=== Start Generating Feature Matrix ===")
     matrix = genFeature(co_appear_l, df_Face, df_Imsi)  # 生成关联矩阵
+    print("=== End Generating Feature Matrix ===")
     X = score(matrix) #计算关联分数
     y = label1(co_appear_l) #计算标签
     X = np.array(X)
@@ -196,9 +205,10 @@ if __name__ == '__main__':
 
     #用XGBC分类器进行分类
     model = XGBClassifier(scale_pos_weight=100, learning_rate=0.05, random_state=1000)
-    print('== Start Training ==')
+    print('=== Start Training ===')
+    print(X, y)
     model.fit(X, y)  # 模型训练
-    print('== End Training ==')
+    print('=== End Training ===')
 
     probability = model.predict_proba(X)[:, 1]
     res = pd.DataFrame(co_appear_l,columns=['FaceLabel','Code','Co_appear'])
@@ -210,51 +220,51 @@ if __name__ == '__main__':
     print("xgboost计算的正确率为：", len(xgb_temp[xgb_temp['label'] == 1]), len(xgb_temp), str(precision_xgb))
 
     #测试
-    face_list, code_list = [], []
-    path_imsi = test_folder + 'CCF2021_run_record_c_EvalA.csv'
-    path_face = test_folder + 'CCF2021_run_record_p_EvalA.csv'
+    # face_list, code_list = [], []
+    # path_imsi = test_folder + 'CCF2021_run_record_c_EvalA.csv'
+    # path_face = test_folder + 'CCF2021_run_record_p_EvalA.csv'
 
-    df_Imsi = pd.read_csv(path_imsi, dtype=str)
-    df_Imsi.columns = ['DeviceID', 'Lon', 'Lat', 'Time', 'Code']
-    df_Imsi['Time1'] = pd.to_datetime(df_Imsi['Time'])
-    df_Imsi['TimeStamp'] = [int(t.timestamp()) for t in df_Imsi['Time1']]
-    df_Face = pd.read_csv(path_face, dtype=str)
-    df_Face.columns = ['DeviceID', 'Lon', 'Lat', 'Time', 'FaceLabel']
-    df_Face['Time1'] = pd.to_datetime(df_Face['Time'])
-    df_Face['TimeStamp'] = [int(t.timestamp()) for t in df_Face['Time1']]
+    # df_Imsi = pd.read_csv(path_imsi, dtype=str)
+    # df_Imsi.columns = ['DeviceID', 'Lon', 'Lat', 'Time', 'Code']
+    # df_Imsi['Time1'] = pd.to_datetime(df_Imsi['Time'])
+    # df_Imsi['TimeStamp'] = [int(t.timestamp()) for t in df_Imsi['Time1']]
+    # df_Face = pd.read_csv(path_face, dtype=str)
+    # df_Face.columns = ['DeviceID', 'Lon', 'Lat', 'Time', 'FaceLabel']
+    # df_Face['Time1'] = pd.to_datetime(df_Face['Time'])
+    # df_Face['TimeStamp'] = [int(t.timestamp()) for t in df_Face['Time1']]
 
-    df_Face = df_Face.sort_values(by="TimeStamp")
-    df_Imsi = df_Imsi.sort_values(by="TimeStamp")
-    df_Imsi["FaceLabel"] = df_Imsi['Code'].map(lambda x: dict_label.get(x))
-    device_list = df_Face['DeviceID'].drop_duplicates().values.tolist()
+    # df_Face = df_Face.sort_values(by="TimeStamp")
+    # df_Imsi = df_Imsi.sort_values(by="TimeStamp")
+    # df_Imsi["FaceLabel"] = df_Imsi['Code'].map(lambda x: dict_label.get(x))
+    # device_list = df_Face['DeviceID'].drop_duplicates().values.tolist()
 
-    for device in device_list:
-        face_list.append(df_Face.loc[df_Face['DeviceID'] == device])
-        code_list.append(df_Imsi.loc[df_Imsi['DeviceID'] == device])
+    # for device in device_list:
+    #     face_list.append(df_Face.loc[df_Face['DeviceID'] == device])
+    #     code_list.append(df_Imsi.loc[df_Imsi['DeviceID'] == device])
 
-    co_appear_dict = get_matchdf(device_list, face_list, code_list, window_size, stride)
-    l = len(co_appear_dict)
-    co_appear_l = []
-    i = 0
-    for k, v in co_appear_dict.items():
-        co_appear_l.append([k[0], k[1], v])
-        i += 1
-    matrix = genFeature(co_appear_l, df_Face, df_Imsi)  # 生成关联矩阵
-    X = score(matrix)  # 计算关联分数
-    X = np.array(X)
+    # co_appear_dict = get_matchdf(device_list, face_list, code_list, window_size, stride)
+    # l = len(co_appear_dict)
+    # co_appear_l = []
+    # i = 0
+    # for k, v in co_appear_dict.items():
+    #     co_appear_l.append([k[0], k[1], v])
+    #     i += 1
+    # matrix = genFeature(co_appear_l, df_Face, df_Imsi)  # 生成关联矩阵
+    # X = score(matrix)  # 计算关联分数
+    # X = np.array(X)
 
-    print('== Start Testing ==')
-    probability = model.predict_proba(X)[:, 1]
-    print('== End Testing ==')
-    res = pd.DataFrame(co_appear_l, columns=['FaceLabel', 'Code', 'Co_appear'])
-    res['probability'] = pd.Series(probability.tolist())
+    # print('== Start Testing ==')
+    # probability = model.predict_proba(X)[:, 1]
+    # print('== End Testing ==')
+    # res = pd.DataFrame(co_appear_l, columns=['FaceLabel', 'Code', 'Co_appear'])
+    # res['probability'] = pd.Series(probability.tolist())
 
-    xgb_temp = res.groupby("FaceLabel").apply(lambda t: t[t.probability == t.probability.max()].iloc[0])
+    # xgb_temp = res.groupby("FaceLabel").apply(lambda t: t[t.probability == t.probability.max()].iloc[0])
 
-    path_pred = result_folder + "CCF2021_run_pred_EvalA.csv"
-    df_pred = pd.DataFrame(zip(xgb_temp['FaceLabel'], xgb_temp['Code']), columns=['人员编号', '特征码']).sort_values(
-        by=['人员编号'])
-    df_pred.to_csv(path_pred, index=False)
+    # path_pred = result_folder + "CCF2021_run_pred_EvalA.csv"
+    # df_pred = pd.DataFrame(zip(xgb_temp['FaceLabel'], xgb_temp['Code']), columns=['人员编号', '特征码']).sort_values(
+    #     by=['人员编号'])
+    # df_pred.to_csv(path_pred, index=False)
 
 
 
