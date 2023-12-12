@@ -1,19 +1,8 @@
-# -*- coding: utf-8 -*-
-"""
-CCF2021 run 算法基准程序
-@author: zhouwei
-"""
-
-import pandas as pd
-
+import sys
 import random
 import numpy as np
+import pandas as pd
 from xgboost import XGBClassifier
-
-rdseed = 10
-random.seed(rdseed)
-np.random.seed(rdseed)
-
 
 def get_matchdf(device_list, face_list, code_list, window_size, stride):
     co_appear_dict ,dict_Face_window, dict_Imsi_window = {}, {}, {}
@@ -25,7 +14,7 @@ def get_matchdf(device_list, face_list, code_list, window_size, stride):
 
         face_len, code_len = len(face_list[_]), len(code_list[_])
         # print(face_len, code_len)
-        print("=== Position {} Begin ===".format(device_list[_]))
+        # print("=== Position {} Begin ===".format(device_list[_]))
         face_index, code_index = 0, 0
         start_face, start_code = 0, 0  # record the start index in last window
 
@@ -76,9 +65,8 @@ def get_matchdf(device_list, face_list, code_list, window_size, stride):
             end_time += stride
             if start_time > the_end:
                 break
-        print("=== Position {} End ===".format(device_list[_]))
+        # print("=== Position {} End ===".format(device_list[_]))
     return co_appear_dict, dict_Face_window, dict_Imsi_window
-
 
 def genFeature(l_TM, face_total, imsi_total, face_window, imsi_window):
     # 人脸的总次数
@@ -119,7 +107,6 @@ def genFeature(l_TM, face_total, imsi_total, face_window, imsi_window):
         f.append([l_TM[i][2], face_total[face], imsi_total[code], face_window[face], imsi_window[code]])
     return f
 
-
 def score(res):
     for i in range(len(res)):
         n_pc, n_p, n_c = res[i][0], res[i][3], res[i][4]
@@ -127,7 +114,6 @@ def score(res):
         res[i].append(con_score)
     res1 = [row[0:3] + [row[5]] for row in res]
     return res1
-
 
 def label1(l_TM):
     label = []
@@ -141,7 +127,6 @@ def label1(l_TM):
             label.append(0)
     return label
 
-
 def label(row):
     p = row['FaceLabel']
     c = row['Code']
@@ -150,7 +135,6 @@ def label(row):
         return 1
     else:
         return 0
-
 
 train_folder, test_folder, result_folder = 'train_dataset/', 'test_dataset/', 'result/'
 
@@ -166,7 +150,9 @@ dict_Face_total, dict_Imsi_total = None, None
 dict_Face_window, dict_Imsi_window = None, None
 
 if __name__ == '__main__':
-
+    print("=================================================")
+    window_size, stride = int(sys.argv[1]), int(sys.argv[2])
+    print("paras: window = {}, stride = {}".format(window_size, stride))
     df_Imsi = pd.read_csv(path_imsi, dtype=str)
     df_Imsi.columns = ['DeviceID', 'Lon', 'Lat', 'Time', 'Code']
     df_Imsi['Time1'] = pd.to_datetime(df_Imsi['Time'])
@@ -200,9 +186,9 @@ if __name__ == '__main__':
     for k, v in co_appear_dict.items():
         co_appear_l.append([k[0], k[1], v])
     
-    print("=== Start Generating Feature Matrix ===")
+    # print("=== Start Generating Feature Matrix ===")
     matrix = genFeature(co_appear_l, dict_Face_total, dict_Imsi_total, dict_Face_window, dict_Imsi_window)  # 生成关联矩阵
-    print("=== End Generating Feature Matrix ===")
+    # print("=== End Generating Feature Matrix ===")
     X = score(matrix)  # 计算关联分数
     y = label1(co_appear_l)  # 计算标签
     X = np.array(X)
@@ -210,10 +196,10 @@ if __name__ == '__main__':
 
     # 用XGBC分类器进行分类
     model = XGBClassifier(scale_pos_weight=100, learning_rate=0.05, random_state=1000)
-    print('=== Start Training ===')
+    # print('=== Start Training ===')
     # print(X, y)
     model.fit(X, y)  # 模型训练
-    print('=== End Training ===')
+    # print('=== End Training ===')
 
     probability = model.predict_proba(X)[:, 1]
     res = pd.DataFrame(co_appear_l, columns=['FaceLabel', 'Code', 'Co_appear'])
@@ -223,6 +209,7 @@ if __name__ == '__main__':
     xgb_temp['label'] = xgb_temp.apply(label, axis=1)
     precision_xgb = len(xgb_temp[xgb_temp['label'] == 1]) / len(xgb_temp)
     print("acc = {} / {} = {}".format(len(xgb_temp[xgb_temp['label'] == 1]), len(xgb_temp), str(precision_xgb)))
+    print("=================================================")
 
     # 测试
     # face_list, code_list = [], []
