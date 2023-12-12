@@ -45,11 +45,9 @@ if __name__ == '__main__':
     df_Imsi["FaceLabel"] = df_Imsi['Code'].map(lambda x: dict_label.get(x))
 
     device_list = df_Face['DeviceID'].drop_duplicates().values.tolist()
-
     for device in device_list:
         face_list.append(df_Face.loc[df_Face['DeviceID'] == device])
         code_list.append(df_Imsi.loc[df_Imsi['DeviceID'] == device])
-
     # co_appear_dict = {'Facelabel' : [], 'Code' : []}
 
     for _ in range(len(device_list)): # Each position
@@ -57,12 +55,12 @@ if __name__ == '__main__':
         start_time = min(face_list[_]['TimeStamp'].iloc[0], code_list[_]['TimeStamp'].iloc[0])
         end_time = start_time + window_size
         the_end = max(face_list[_]['TimeStamp'].iloc[-1], code_list[_]['TimeStamp'].iloc[-1])
-        
+
         face_len, code_len = len(face_list[_]), len(code_list[_])
         print(face_len, code_len)
         print(" = = = ")
         face_index, code_index = 0, 0
-        start_face, start_code = 0, 0 # record the start index in last window 
+        start_face, start_code = 0, 0 # record the start index in last window
 
         # There are still dispute:
             # 1、when a particular person/code occur more than once in current window, n_pc++? n_p++? n_c++?
@@ -102,7 +100,7 @@ if __name__ == '__main__':
                 if face_list[_]['TimeStamp'].iloc[face_index] >= end_time \
                     and code_list[_]['TimeStamp'].iloc[code_index] >= end_time:
                     break
-                
+
             a = 0
             for f in faces:
                 for c in codes:
@@ -110,7 +108,7 @@ if __name__ == '__main__':
                         co_appear_dict[(f, c)] += 1
                     else:
                         co_appear_dict[(f, c)] = 1
-            # update the window 
+            # update the window
             start_time += stride
             end_time += stride
             if start_time > the_end:
