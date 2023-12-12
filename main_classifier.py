@@ -150,7 +150,7 @@ dict_Face_total, dict_Imsi_total = None, None
 dict_Face_window, dict_Imsi_window = None, None
 
 if __name__ == '__main__':
-    sys.stdout = open("res.log", "a")
+    sys.stdout = open("logs/res.log", "a")
     print("=================================================")
     window_size, stride = int(sys.argv[1]), int(sys.argv[2])
     print("paras: window = {}, stride = {}".format(window_size, stride))
