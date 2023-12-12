@@ -16,7 +16,7 @@ np.random.seed(rdseed)
 
 
 def get_matchdf(device_list, face_list, code_list, window_size, stride):
-    co_appear_dict = {}
+    co_appear_dict ,dict_Face_window, dict_Imsi_window = {}, {}, {}
     for _ in range(len(device_list)):  # Each position
 
         start_time = min(face_list[_]['TimeStamp'].iloc[0], code_list[_]['TimeStamp'].iloc[0])
@@ -68,31 +68,30 @@ def get_matchdf(device_list, face_list, code_list, window_size, stride):
 
             for f in faces:
                 for c in codes:
-                    if (f, c) in co_appear_dict:
-                        co_appear_dict[(f, c)] += 1
-                    else:
-                        co_appear_dict[(f, c)] = 1
+                    co_appear_dict[(f, c)] = 1 if (f, c) not in co_appear_dict else co_appear_dict[(f, c)] + 1
+                    dict_Face_window[f] = 1 if f not in dict_Face_window else dict_Face_window[f] + 1
+                    dict_Imsi_window[c] = 1 if c not in dict_Imsi_window else dict_Imsi_window[c] + 1
             # update the window
             start_time += stride
             end_time += stride
             if start_time > the_end:
                 break
         print("=== Position {} End ===".format(device_list[_]))
-    return co_appear_dict
+    return co_appear_dict, dict_Face_window, dict_Imsi_window
 
 
-def genFeature(l_TM, df_Face, df_Imsi, facelist, face_count, codelist, code_count):
+def genFeature(l_TM, face_total, imsi_total, face_window, imsi_window):
     # 人脸的总次数
-    df_T = df_Face.groupby('FaceLabel').count().reset_index()[['FaceLabel', 'DeviceID']]
-    df_T.columns = ['FaceLabel', 'countT']  # 计算每一个facelabel出现的次数
-    facelist1 = df_T['FaceLabel'].tolist()
-    face_count1 = df_T['countT'].tolist()
+    # df_T = df_Face.groupby('FaceLabel').count().reset_index()[['FaceLabel', 'DeviceID']]
+    # df_T.columns = ['FaceLabel', 'countT']  # 计算每一个facelabel出现的次数
+    # facelist1 = df_T['FaceLabel'].tolist()
+    # face_count1 = df_T['countT'].tolist()
 
-    # 特征码的总次数
-    df_M = df_Imsi.groupby('Code').count().reset_index()[['Code', 'DeviceID']]
-    df_M.columns = ['Code', 'countM']
-    codelist1 = df_M['Code'].tolist()
-    code_count1 = df_M['countM'].tolist()
+    # # 特征码的总次数
+    # df_M = df_Imsi.groupby('Code').count().reset_index()[['Code', 'DeviceID']]
+    # df_M.columns = ['Code', 'countM']
+    # codelist1 = df_M['Code'].tolist()
+    # code_count1 = df_M['countM'].tolist()
 
     # 汇总所有特征
     # f : [n_p, n_c, n_pc], f 现在同时用于 score(f) 函数计算得分和 model(x) 中 x 的前三项， 其中 n_p, n_c 在这里取得是整个数据集出现的次数，此处需要修改
@@ -106,19 +105,18 @@ def genFeature(l_TM, df_Face, df_Imsi, facelist, face_count, codelist, code_coun
 
     f = []
     for i in range(len(l_TM)):
-        facelabel, code = l_TM[i][0], l_TM[i][1]
-        if facelabel not in facelist:
-            if code not in codelist:
-                f.append([l_TM[i][2], 0, 0, 0, 0])
-            else:
-                f.append([l_TM[i][2], 0, code_count1[codelist.index(code)], 0, code_count[codelist.index(code)]])
-        else:
-            if code not in codelist:
-                f.append(
-                    [l_TM[i][2], face_count1[facelist.index(facelabel)], 0, face_count[facelist.index(facelabel)], 0])
-            else:
-                f.append([l_TM[i][2], face_count1[facelist.index(facelabel)], code_count1[codelist.index(code)],
-                          face_count[facelist.index(facelabel)], code_count[codelist.index(code)]])
+        face, code = l_TM[i][0], l_TM[i][1]
+        # if facelabel not in face_total:
+        #     if code not in :
+        #         f.append([l_TM[i][2], 0, 0, 0, 0])
+        #     else:
+        #         f.append([l_TM[i][2], 0, code_count1[codelist.index(code)], 0, code_count[codelist.index(code)]])
+        # else:
+        #     if code not in codelist:
+        #         f.append(
+        #             [l_TM[i][2], face_count1[facelist.index(facelabel)], 0, face_count[facelist.index(facelabel)], 0])
+        #     else:
+        f.append([l_TM[i][2], face_total[face], imsi_total[code], face_window[face], imsi_window[code]])
     return f
 
 
@@ -168,8 +166,10 @@ path_face = train_folder + 'CCF2021_run_record_p_Train.csv'
 dict_label = {}  # dict_label is used to identify the correct person-code relation
 device_list = []  # device_list is used to record all the positions (Dxx)
 face_list, code_list = [], []  # xxxx_list is used to record the info of different positions
-window_size, stride = 100, 20  # identify person and code appear in [time, time + window_size] as co-appear
-co_appear_dict = {}
+window_size, stride = 100, 15  # identify person and code appear in [time, time + window_size] as co-appear
+co_appear_dict = None
+dict_Face_total, dict_Imsi_total = None, None
+dict_Face_window, dict_Imsi_window = None, None
 
 if __name__ == '__main__':
 
@@ -197,28 +197,17 @@ if __name__ == '__main__':
         face_list.append(df_Face.loc[df_Face['DeviceID'] == device])
         code_list.append(df_Imsi.loc[df_Imsi['DeviceID'] == device])
 
-    df_T = df_Face.groupby('FaceLabel').count().reset_index()[['FaceLabel', 'DeviceID']]
-    df_T.columns = ['FaceLabel', 'countT']  # 计算每一个facelabel出现的次数
-    facelist = df_T['FaceLabel'].tolist()
-    face_count = [0] * len(facelist)
+    dict_Face_total = df_Face.groupby('FaceLabel').count().to_dict()['DeviceID']
+    dict_Imsi_total = df_Imsi.groupby('Code').count().to_dict()['DeviceID']
 
-    df_M = df_Imsi.groupby('Code').count().reset_index()[['Code', 'DeviceID']]
-    df_M.columns = ['Code', 'countM']
-    codelist = df_M['Code'].tolist()
-    code_count = [0] * len(codelist)
-
-    co_appear_dict = get_matchdf(device_list, face_list, code_list, window_size, stride)
+    co_appear_dict, dict_Face_window, dict_Imsi_window = get_matchdf(device_list, face_list, code_list, window_size, stride)
     l = len(co_appear_dict)
     co_appear_l = []
-    i = 0
     for k, v in co_appear_dict.items():
         co_appear_l.append([k[0], k[1], v])
-        face_count[facelist.index(k[0])] += v
-        code_count[codelist.index(k[1])] += v
-        i += 1
-
+    
     print("=== Start Generating Feature Matrix ===")
-    matrix = genFeature(co_appear_l, df_Face, df_Imsi, facelist, face_count, codelist, code_count)  # 生成关联矩阵
+    matrix = genFeature(co_appear_l, dict_Face_total, dict_Imsi_total, dict_Face_window, dict_Imsi_window)  # 生成关联矩阵
     print("=== End Generating Feature Matrix ===")
     X = score(matrix)  # 计算关联分数
     y = label1(co_appear_l)  # 计算标签
