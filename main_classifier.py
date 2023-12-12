@@ -36,7 +36,7 @@ def get_matchdf(device_list, face_list, code_list, window_size, stride):
         # Current approach: 1: +=1, 2: No, 3: No.
 
         while 1:  # slide window [start_time, end_time], nxt window is [start_time + stride, end_time + stride]
-            print(face_index, code_index, start_face, start_code, start_time, end_time)
+            # print(face_index, code_index, start_face, start_code, start_time, end_time)
             faces, codes = [], []
             face_index, code_index = start_face, start_code  # prevent to start from 0 for saving time
 
@@ -122,16 +122,10 @@ def genFeature(l_TM, face_total, imsi_total, face_window, imsi_window):
 
 def score(res):
     for i in range(len(res)):
-        n_pc = res[i][0]
-        n_p = res[i][3]
-        n_c = res[i][4]
-        if n_pc > n_p or n_pc > n_c:
-            con_score = 0
-        else:
-            con_score = np.log(1 + n_pc) * np.log(1 + n_pc / (n_c - n_pc + 1)) * np.log(1 + n_pc / (n_p - n_pc + 2))
+        n_pc, n_p, n_c = res[i][0], res[i][3], res[i][4]
+        con_score = 0 if n_pc > n_p or n_pc > n_c else np.log(1 + n_pc) * np.log(1 + n_pc / (n_c - n_pc + 1)) * np.log(1 + n_pc / (n_p - n_pc + 2))
         res[i].append(con_score)
     res1 = [row[0:3] + [row[5]] for row in res]
-
     return res1
 
 
@@ -166,7 +160,7 @@ path_face = train_folder + 'CCF2021_run_record_p_Train.csv'
 dict_label = {}  # dict_label is used to identify the correct person-code relation
 device_list = []  # device_list is used to record all the positions (Dxx)
 face_list, code_list = [], []  # xxxx_list is used to record the info of different positions
-window_size, stride = 100, 15  # identify person and code appear in [time, time + window_size] as co-appear
+window_size, stride = 100, 20  # identify person and code appear in [time, time + window_size] as co-appear
 co_appear_dict = None
 dict_Face_total, dict_Imsi_total = None, None
 dict_Face_window, dict_Imsi_window = None, None
@@ -217,7 +211,7 @@ if __name__ == '__main__':
     # 用XGBC分类器进行分类
     model = XGBClassifier(scale_pos_weight=100, learning_rate=0.05, random_state=1000)
     print('=== Start Training ===')
-    print(X, y)
+    # print(X, y)
     model.fit(X, y)  # 模型训练
     print('=== End Training ===')
 
@@ -228,7 +222,7 @@ if __name__ == '__main__':
     xgb_temp = res.groupby("FaceLabel").apply(lambda t: t[t.probability == t.probability.max()].iloc[0])
     xgb_temp['label'] = xgb_temp.apply(label, axis=1)
     precision_xgb = len(xgb_temp[xgb_temp['label'] == 1]) / len(xgb_temp)
-    print("xgboost计算的正确率为：", len(xgb_temp[xgb_temp['label'] == 1]), len(xgb_temp), str(precision_xgb))
+    print("acc = {} / {} = {}".format(len(xgb_temp[xgb_temp['label'] == 1]), len(xgb_temp), str(precision_xgb)))
 
     # 测试
     # face_list, code_list = [], []
