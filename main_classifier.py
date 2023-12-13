@@ -196,7 +196,7 @@ if __name__ == '__main__':
     y = np.array(y)
 
     # 用XGBC分类器进行分类
-    model = XGBClassifier(scale_pos_weight=100, learning_rate=0.05, random_state=1000)
+    model = XGBClassifier(scale_pos_weight=100, learning_rate=0.5, random_state=1000)
     # print('=== Start Training ===')
     # print(X, y)
     model.fit(X, y)  # 模型训练
