@@ -151,16 +151,16 @@ path_face = train_folder + 'CCF2021_run_record_p_Train.csv'
 dict_label = {}  # dict_label is used to identify the correct person-code relation
 device_list = []  # device_list is used to record all the positions (Dxx)
 face_list, code_list = [], []  # xxxx_list is used to record the info of different positions
-window_size, stride = 100, 20  # identify person and code appear in [time, time + window_size] as co-appear
+window_size, stride, learning_rate = 100, 20, 0.1  # identify person and code appear in [time, time + window_size] as co-appear
 co_appear_dict = None
 dict_Face_total, dict_Imsi_total = None, None
 dict_Face_window, dict_Imsi_window = None, None
 
 if __name__ == '__main__':
-    window_size, stride, learning_rate = int(sys.argv[1]), int(sys.argv[2]), float(sys.argv[3])*0.02
-    sys.stdout = open(f"logs/res_learning_rate.log", "a")
+    window_size, stride, learning_rate = int(sys.argv[1]), int(sys.argv[2]), float(sys.argv[3]) * 0.2
+    sys.stdout = open(f"logs/res.log", "a")
     print("=================================================")
-    print("paras: window = {}, stride = {},learning_rate = {}".format(window_size, stride, learning_rate))
+    print("paras: window = {}, stride = {}, learning_rate = {}".format(window_size, stride, learning_rate))
     df_Imsi = pd.read_csv(path_imsi, dtype=str)
     df_Imsi.columns = ['DeviceID', 'Lon', 'Lat', 'Time', 'Code']
     df_Imsi['Time1'] = pd.to_datetime(df_Imsi['Time'])
@@ -258,9 +258,9 @@ if __name__ == '__main__':
     X = score(matrix)  # 计算关联分数
     X = np.array(X)
 
-    print('== Start Testing ==')
+    # print('== Start Testing ==')
     probability = model.predict_proba(X)[:, 1]
-    print('== End Testing ==')
+    # print('== End Testing ==')
     res = pd.DataFrame(co_appear_l, columns=['FaceLabel', 'Code', 'Co_appear'])
     res['probability'] = pd.Series(probability.tolist())
 
