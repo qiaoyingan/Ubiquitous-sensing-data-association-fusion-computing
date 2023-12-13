@@ -4,8 +4,9 @@ import numpy as np
 import pandas as pd
 from xgboost import XGBClassifier
 
+
 def get_matchdf(device_list, face_list, code_list, window_size, stride):
-    co_appear_dict ,dict_Face_window, dict_Imsi_window = {}, {}, {}
+    co_appear_dict, dict_Face_window, dict_Imsi_window = {}, {}, {}
     for _ in range(len(device_list)):  # Each position
 
         start_time = min(face_list[_]['TimeStamp'].iloc[0], code_list[_]['TimeStamp'].iloc[0])
@@ -68,6 +69,7 @@ def get_matchdf(device_list, face_list, code_list, window_size, stride):
         # print("=== Position {} End ===".format(device_list[_]))
     return co_appear_dict, dict_Face_window, dict_Imsi_window
 
+
 def genFeature(l_TM, face_total, imsi_total, face_window, imsi_window):
     # 人脸的总次数
     # df_T = df_Face.groupby('FaceLabel').count().reset_index()[['FaceLabel', 'DeviceID']]
@@ -107,13 +109,16 @@ def genFeature(l_TM, face_total, imsi_total, face_window, imsi_window):
         f.append([l_TM[i][2], face_total[face], imsi_total[code], face_window[face], imsi_window[code]])
     return f
 
+
 def score(res):
     for i in range(len(res)):
         n_pc, n_p, n_c = res[i][0], res[i][3], res[i][4]
-        con_score = 0 if n_pc > n_p or n_pc > n_c else np.log(1 + n_pc) * np.log(1 + n_pc / (n_c - n_pc + 1)) * np.log(1 + n_pc / (n_p - n_pc + 2))
+        con_score = 0 if n_pc > n_p or n_pc > n_c else np.log(1 + n_pc) * np.log(1 + n_pc / (n_c - n_pc + 1)) * np.log(
+            1 + n_pc / (n_p - n_pc + 2))
         res[i].append(con_score)
     res1 = [row[0:3] + [row[5]] for row in res]
     return res1
+
 
 def label1(l_TM):
     label = []
@@ -127,6 +132,7 @@ def label1(l_TM):
             label.append(0)
     return label
 
+
 def label(row):
     p = row['FaceLabel']
     c = row['Code']
@@ -135,6 +141,7 @@ def label(row):
         return 1
     else:
         return 0
+
 
 train_folder, test_folder, result_folder = 'train_dataset/', 'test_dataset/', 'result/'
 
@@ -150,10 +157,10 @@ dict_Face_total, dict_Imsi_total = None, None
 dict_Face_window, dict_Imsi_window = None, None
 
 if __name__ == '__main__':
-    sys.stdout = open("logs/res.log", "a")
+    window_size, stride, learning_rate = int(sys.argv[1]), int(sys.argv[2]), float(sys.argv[3])*0.02
+    sys.stdout = open(f"logs/res_learning_rate.log", "a")
     print("=================================================")
-    window_size, stride = int(sys.argv[1]), int(sys.argv[2])
-    print("paras: window = {}, stride = {}".format(window_size, stride))
+    print("paras: window = {}, stride = {},learning_rate = {}".format(window_size, stride, learning_rate))
     df_Imsi = pd.read_csv(path_imsi, dtype=str)
     df_Imsi.columns = ['DeviceID', 'Lon', 'Lat', 'Time', 'Code']
     df_Imsi['Time1'] = pd.to_datetime(df_Imsi['Time'])
@@ -181,12 +188,13 @@ if __name__ == '__main__':
     dict_Face_total = df_Face.groupby('FaceLabel').count().to_dict()['DeviceID']
     dict_Imsi_total = df_Imsi.groupby('Code').count().to_dict()['DeviceID']
 
-    co_appear_dict, dict_Face_window, dict_Imsi_window = get_matchdf(device_list, face_list, code_list, window_size, stride)
+    co_appear_dict, dict_Face_window, dict_Imsi_window = get_matchdf(device_list, face_list, code_list, window_size,
+                                                                     stride)
     l = len(co_appear_dict)
     co_appear_l = []
     for k, v in co_appear_dict.items():
         co_appear_l.append([k[0], k[1], v])
-    
+
     # print("=== Start Generating Feature Matrix ===")
     matrix = genFeature(co_appear_l, dict_Face_total, dict_Imsi_total, dict_Face_window, dict_Imsi_window)  # 生成关联矩阵
     # print("=== End Generating Feature Matrix ===")
@@ -195,8 +203,8 @@ if __name__ == '__main__':
     X = np.array(X)
     y = np.array(y)
 
-    # 用XGBC分类器进行分类
-    model = XGBClassifier(scale_pos_weight=100, learning_rate=0.05, random_state=1000)
+    # 用XGB分类器进行分类
+    model = XGBClassifier(scale_pos_weight=100, learning_rate=learning_rate, random_state=1000)
     # print('=== Start Training ===')
     # print(X, y)
     model.fit(X, y)  # 模型训练
