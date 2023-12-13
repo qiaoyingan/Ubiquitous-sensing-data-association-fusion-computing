@@ -213,48 +213,52 @@ if __name__ == '__main__':
     print("=================================================")
 
     # 测试
-    # face_list, code_list = [], []
-    # path_imsi = test_folder + 'CCF2021_run_record_c_EvalA.csv'
-    # path_face = test_folder + 'CCF2021_run_record_p_EvalA.csv'
-    #
-    # df_Imsi = pd.read_csv(path_imsi, dtype=str)
-    # df_Imsi.columns = ['DeviceID', 'Lon', 'Lat', 'Time', 'Code']
-    # df_Imsi['Time1'] = pd.to_datetime(df_Imsi['Time'])
-    # df_Imsi['TimeStamp'] = [int(t.timestamp()) for t in df_Imsi['Time1']]
-    # df_Face = pd.read_csv(path_face, dtype=str)
-    # df_Face.columns = ['DeviceID', 'Lon', 'Lat', 'Time', 'FaceLabel']
-    # df_Face['Time1'] = pd.to_datetime(df_Face['Time'])
-    # df_Face['TimeStamp'] = [int(t.timestamp()) for t in df_Face['Time1']]
-    #
-    # df_Face = df_Face.sort_values(by="TimeStamp")
-    # df_Imsi = df_Imsi.sort_values(by="TimeStamp")
-    # df_Imsi["FaceLabel"] = df_Imsi['Code'].map(lambda x: dict_label.get(x))
-    # device_list = df_Face['DeviceID'].drop_duplicates().values.tolist()
-    #
-    # for device in device_list:
-    #     face_list.append(df_Face.loc[df_Face['DeviceID'] == device])
-    #     code_list.append(df_Imsi.loc[df_Imsi['DeviceID'] == device])
-    #
-    # co_appear_dict = get_matchdf(device_list, face_list, code_list, window_size, stride)
-    # l = len(co_appear_dict)
-    # co_appear_l = []
-    # i = 0
-    # for k, v in co_appear_dict.items():
-    #     co_appear_l.append([k[0], k[1], v])
-    #     i += 1
-    # matrix = genFeature(co_appear_l, df_Face, df_Imsi)  # 生成关联矩阵
-    # X = score(matrix)  # 计算关联分数
-    # X = np.array(X)
-    #
-    # print('== Start Testing ==')
-    # probability = model.predict_proba(X)[:, 1]
-    # print('== End Testing ==')
-    # res = pd.DataFrame(co_appear_l, columns=['FaceLabel', 'Code', 'Co_appear'])
-    # res['probability'] = pd.Series(probability.tolist())
-    #
-    # xgb_temp = res.groupby("FaceLabel").apply(lambda t: t[t.probability == t.probability.max()].iloc[0])
-    #
-    # path_pred = result_folder + "CCF2021_run_pred_EvalA.csv"
-    # df_pred = pd.DataFrame(zip(xgb_temp['FaceLabel'], xgb_temp['Code']), columns=['人员编号', '特征码']).sort_values(
-    #     by=['人员编号'])
-    # df_pred.to_csv(path_pred, index=False)
+    face_list, code_list = [], []
+    path_imsi = test_folder + 'CCF2021_run_record_c_EvalB.csv'
+    path_face = test_folder + 'CCF2021_run_record_p_EvalB.csv'
+
+    df_Imsi = pd.read_csv(path_imsi, dtype=str)
+    df_Imsi.columns = ['DeviceID', 'Lon', 'Lat', 'Time', 'Code']
+    df_Imsi['Time1'] = pd.to_datetime(df_Imsi['Time'])
+    df_Imsi['TimeStamp'] = [int(t.timestamp()) for t in df_Imsi['Time1']]
+    df_Face = pd.read_csv(path_face, dtype=str)
+    df_Face.columns = ['DeviceID', 'Lon', 'Lat', 'Time', 'FaceLabel']
+    df_Face['Time1'] = pd.to_datetime(df_Face['Time'])
+    df_Face['TimeStamp'] = [int(t.timestamp()) for t in df_Face['Time1']]
+
+    df_Face = df_Face.sort_values(by="TimeStamp")
+    df_Imsi = df_Imsi.sort_values(by="TimeStamp")
+    df_Imsi["FaceLabel"] = df_Imsi['Code'].map(lambda x: dict_label.get(x))
+    device_list = df_Face['DeviceID'].drop_duplicates().values.tolist()
+
+    for device in device_list:
+        face_list.append(df_Face.loc[df_Face['DeviceID'] == device])
+        code_list.append(df_Imsi.loc[df_Imsi['DeviceID'] == device])
+
+    dict_Face_total = df_Face.groupby('FaceLabel').count().to_dict()['DeviceID']
+    dict_Imsi_total = df_Imsi.groupby('Code').count().to_dict()['DeviceID']
+
+    co_appear_dict, dict_Face_window, dict_Imsi_window = get_matchdf(device_list, face_list, code_list, window_size,
+                                                                     stride)
+    l = len(co_appear_dict)
+    co_appear_l = []
+    for k, v in co_appear_dict.items():
+        co_appear_l.append([k[0], k[1], v])
+
+    matrix = genFeature(co_appear_l, dict_Face_total, dict_Imsi_total, dict_Face_window,
+                        dict_Imsi_window)  # 生成关联矩阵
+    X = score(matrix)  # 计算关联分数
+    X = np.array(X)
+
+    print('== Start Testing ==')
+    probability = model.predict_proba(X)[:, 1]
+    print('== End Testing ==')
+    res = pd.DataFrame(co_appear_l, columns=['FaceLabel', 'Code', 'Co_appear'])
+    res['probability'] = pd.Series(probability.tolist())
+
+    xgb_temp = res.groupby("FaceLabel").apply(lambda t: t[t.probability == t.probability.max()].iloc[0])
+
+    path_pred = result_folder + "CCF2021_run_pred_EvalB.csv"
+    df_pred = pd.DataFrame(zip(xgb_temp['FaceLabel'], xgb_temp['Code']), columns=['人员编号', '特征码']).sort_values(
+        by=['人员编号'])
+    df_pred.to_csv(path_pred, index=False)
