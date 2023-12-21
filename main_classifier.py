@@ -3,6 +3,8 @@ import random
 import numpy as np
 import pandas as pd
 from xgboost import XGBClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.naive_bayes import BernoulliNB
 
 
 def get_matchdf(device_list, face_list, code_list, window_size, stride):
@@ -157,7 +159,7 @@ dict_Face_total, dict_Imsi_total = None, None
 dict_Face_window, dict_Imsi_window = None, None
 
 if __name__ == '__main__':
-    window_size, stride, learning_rate = int(sys.argv[1]), int(sys.argv[2]), float(sys.argv[3])*0.02
+    window_size, stride, learning_rate = int(sys.argv[1]), int(sys.argv[2]), float(sys.argv[3])
     sys.stdout = open(f"logs/res_learning_rate.log", "a")
     print("=================================================")
     print("paras: window = {}, stride = {},learning_rate = {}".format(window_size, stride, learning_rate))
@@ -200,11 +202,18 @@ if __name__ == '__main__':
     # print("=== End Generating Feature Matrix ===")
     X = score(matrix)  # 计算关联分数
     y = label1(co_appear_l)  # 计算标签
+    count0 = y.count(0)
+    count1 = y.count(1)
+    scale_pos_weight = int(count0/count1)
     X = np.array(X)
     y = np.array(y)
 
+    # model = BernoulliNB(alpha=0.1)
+
+    # model = LogisticRegression(C=1.0, penalty='l2')
+
     # 用XGB分类器进行分类
-    model = XGBClassifier(scale_pos_weight=100, learning_rate=learning_rate, random_state=1000)
+    model = XGBClassifier(scale_pos_weight=scale_pos_weight, learning_rate=learning_rate, random_state=1000)
     # print('=== Start Training ===')
     # print(X, y)
     model.fit(X, y)  # 模型训练

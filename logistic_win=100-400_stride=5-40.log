@@ -1,0 +1,3968 @@
+=================================================
+paras: window = 100, stride = 5
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1583 / 1997 = 0.7926890335503255
+=================================================
+=================================================
+paras: window = 100, stride = 10
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1582 / 1997 = 0.7921882824236355
+=================================================
+=================================================
+paras: window = 100, stride = 15
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1544 / 1997 = 0.7731597396094141
+=================================================
+=================================================
+paras: window = 100, stride = 20
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1561 / 1997 = 0.7816725087631448
+=================================================
+=================================================
+paras: window = 100, stride = 25
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1552 / 1997 = 0.7771657486229344
+=================================================
+=================================================
+paras: window = 100, stride = 30
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1429 / 1997 = 0.7155733600400601
+=================================================
+=================================================
+paras: window = 100, stride = 35
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1518 / 1997 = 0.7601402103154732
+=================================================
+=================================================
+paras: window = 100, stride = 40
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1532 / 1997 = 0.7671507260891337
+=================================================
+=================================================
+paras: window = 110, stride = 5
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1583 / 1997 = 0.7926890335503255
+=================================================
+=================================================
+paras: window = 110, stride = 10
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1583 / 1997 = 0.7926890335503255
+=================================================
+=================================================
+paras: window = 110, stride = 15
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1545 / 1997 = 0.7736604907361042
+=================================================
+=================================================
+paras: window = 110, stride = 20
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1510 / 1997 = 0.756134201301953
+=================================================
+=================================================
+paras: window = 110, stride = 25
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1573 / 1997 = 0.7876815222834251
+=================================================
+=================================================
+paras: window = 110, stride = 30
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1473 / 1997 = 0.7376064096144216
+=================================================
+=================================================
+paras: window = 110, stride = 35
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1539 / 1997 = 0.7706559839759639
+=================================================
+=================================================
+paras: window = 110, stride = 40
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1481 / 1997 = 0.7416124186279419
+=================================================
+=================================================
+paras: window = 120, stride = 5
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1584 / 1997 = 0.7931897846770155
+=================================================
+=================================================
+paras: window = 120, stride = 10
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1575 / 1997 = 0.7886830245368052
+=================================================
+=================================================
+paras: window = 120, stride = 15
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1581 / 1997 = 0.7916875312969455
+=================================================
+=================================================
+paras: window = 120, stride = 20
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1567 / 1997 = 0.784677015523285
+=================================================
+=================================================
+paras: window = 120, stride = 25
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1569 / 1997 = 0.785678517776665
+=================================================
+=================================================
+paras: window = 120, stride = 30
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1558 / 1997 = 0.7801702553830746
+=================================================
+=================================================
+paras: window = 120, stride = 35
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1549 / 1997 = 0.7756634952428643
+=================================================
+=================================================
+paras: window = 120, stride = 40
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1527 / 1997 = 0.7646469704556835
+=================================================
+=================================================
+paras: window = 130, stride = 5
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1575 / 1997 = 0.7886830245368052
+=================================================
+=================================================
+paras: window = 130, stride = 10
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1569 / 1997 = 0.785678517776665
+=================================================
+=================================================
+paras: window = 130, stride = 15
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1541 / 1997 = 0.771657486229344
+=================================================
+=================================================
+paras: window = 130, stride = 20
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1512 / 1997 = 0.757135703555333
+=================================================
+=================================================
+paras: window = 130, stride = 25
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1554 / 1997 = 0.7781672508763144
+=================================================
+=================================================
+paras: window = 130, stride = 30
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1452 / 1997 = 0.7270906359539309
+=================================================
+=================================================
+paras: window = 130, stride = 35
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1546 / 1997 = 0.7741612418627942
+=================================================
+=================================================
+paras: window = 130, stride = 40
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1483 / 1997 = 0.7426139208813219
+=================================================
+=================================================
+paras: window = 140, stride = 5
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1563 / 1997 = 0.7826740110165248
+=================================================
+=================================================
+paras: window = 140, stride = 10
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1560 / 1997 = 0.7811717576364546
+=================================================
+=================================================
+paras: window = 140, stride = 15
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1542 / 1997 = 0.7721582373560341
+=================================================
+=================================================
+paras: window = 140, stride = 20
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1550 / 1997 = 0.7761642463695543
+=================================================
+=================================================
+paras: window = 140, stride = 25
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1552 / 1997 = 0.7771657486229344
+=================================================
+=================================================
+paras: window = 140, stride = 30
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1471 / 1997 = 0.7366049073610416
+=================================================
+=================================================
+paras: window = 140, stride = 35
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1539 / 1997 = 0.7706559839759639
+=================================================
+=================================================
+paras: window = 140, stride = 40
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1544 / 1997 = 0.7731597396094141
+=================================================
+=================================================
+paras: window = 150, stride = 5
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1555 / 1997 = 0.7786680020030045
+=================================================
+=================================================
+paras: window = 150, stride = 10
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1549 / 1997 = 0.7756634952428643
+=================================================
+=================================================
+paras: window = 150, stride = 15
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1549 / 1997 = 0.7756634952428643
+=================================================
+=================================================
+paras: window = 150, stride = 20
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1500 / 1997 = 0.7511266900350526
+=================================================
+=================================================
+paras: window = 150, stride = 25
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1534 / 1997 = 0.7681522283425137
+=================================================
+=================================================
+paras: window = 150, stride = 30
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1542 / 1997 = 0.7721582373560341
+=================================================
+=================================================
+paras: window = 150, stride = 35
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1525 / 1997 = 0.7636454682023035
+=================================================
+=================================================
+paras: window = 150, stride = 40
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1490 / 1997 = 0.7461191787681523
+=================================================
+=================================================
+paras: window = 160, stride = 5
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1539 / 1997 = 0.7706559839759639
+=================================================
+=================================================
+paras: window = 160, stride = 10
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1535 / 1997 = 0.7686529794692039
+=================================================
+=================================================
+paras: window = 160, stride = 15
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1519 / 1997 = 0.7606409614421632
+=================================================
+=================================================
+paras: window = 160, stride = 20
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1529 / 1997 = 0.7656484727090636
+=================================================
+=================================================
+paras: window = 160, stride = 25
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1519 / 1997 = 0.7606409614421632
+=================================================
+=================================================
+paras: window = 160, stride = 30
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1433 / 1997 = 0.7175763645468203
+=================================================
+=================================================
+paras: window = 160, stride = 35
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1520 / 1997 = 0.7611417125688533
+=================================================
+=================================================
+paras: window = 160, stride = 40
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1513 / 1997 = 0.757636454682023
+=================================================
+=================================================
+paras: window = 170, stride = 5
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1521 / 1997 = 0.7616424636955433
+=================================================
+=================================================
+paras: window = 170, stride = 10
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1522 / 1997 = 0.7621432148222334
+=================================================
+=================================================
+paras: window = 170, stride = 15
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1507 / 1997 = 0.7546319479218828
+=================================================
+=================================================
+paras: window = 170, stride = 20
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1476 / 1997 = 0.7391086629944917
+=================================================
+=================================================
+paras: window = 170, stride = 25
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1523 / 1997 = 0.7626439659489234
+=================================================
+=================================================
+paras: window = 170, stride = 30
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1445 / 1997 = 0.7235853780671007
+=================================================
+=================================================
+paras: window = 170, stride = 35
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1512 / 1997 = 0.757135703555333
+=================================================
+=================================================
+paras: window = 170, stride = 40
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1456 / 1997 = 0.729093640460691
+=================================================
+=================================================
+paras: window = 180, stride = 5
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1508 / 1997 = 0.7551326990485728
+=================================================
+=================================================
+paras: window = 180, stride = 10
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1506 / 1997 = 0.7541311967951928
+=================================================
+=================================================
+paras: window = 180, stride = 15
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1506 / 1997 = 0.7541311967951928
+=================================================
+=================================================
+paras: window = 180, stride = 20
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1505 / 1997 = 0.7536304456685028
+=================================================
+=================================================
+paras: window = 180, stride = 25
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1503 / 1997 = 0.7526289434151227
+=================================================
+=================================================
+paras: window = 180, stride = 30
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1505 / 1997 = 0.7536304456685028
+=================================================
+=================================================
+paras: window = 180, stride = 35
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1494 / 1997 = 0.7481221832749124
+=================================================
+=================================================
+paras: window = 180, stride = 40
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1499 / 1997 = 0.7506259389083625
+=================================================
+=================================================
+paras: window = 190, stride = 5
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1486 / 1997 = 0.7441161742613921
+=================================================
+=================================================
+paras: window = 190, stride = 10
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1491 / 1997 = 0.7466199298948423
+=================================================
+=================================================
+paras: window = 190, stride = 15
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1470 / 1997 = 0.7361041562343515
+=================================================
+=================================================
+paras: window = 190, stride = 20
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1445 / 1997 = 0.7235853780671007
+=================================================
+=================================================
+paras: window = 190, stride = 25
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1476 / 1997 = 0.7391086629944917
+=================================================
+=================================================
+paras: window = 190, stride = 30
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1406 / 1997 = 0.7040560841261893
+=================================================
+=================================================
+paras: window = 190, stride = 35
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1481 / 1997 = 0.7416124186279419
+=================================================
+=================================================
+paras: window = 190, stride = 40
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1448 / 1997 = 0.7250876314471708
+=================================================
+=================================================
+paras: window = 200, stride = 5
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1470 / 1997 = 0.7361041562343515
+=================================================
+=================================================
+paras: window = 200, stride = 10
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1467 / 1997 = 0.7346019028542814
+=================================================
+=================================================
+paras: window = 200, stride = 15
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1458 / 1997 = 0.730095142714071
+=================================================
+=================================================
+paras: window = 200, stride = 20
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1469 / 1997 = 0.7356034051076615
+=================================================
+=================================================
+paras: window = 200, stride = 25
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1477 / 1997 = 0.7396094141211818
+=================================================
+=================================================
+paras: window = 200, stride = 30
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1405 / 1997 = 0.7035553329994992
+=================================================
+=================================================
+paras: window = 200, stride = 35
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1471 / 1997 = 0.7366049073610416
+=================================================
+=================================================
+paras: window = 200, stride = 40
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1457 / 1997 = 0.729594391587381
+=================================================
+=================================================
+paras: window = 210, stride = 5
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1457 / 1997 = 0.729594391587381
+=================================================
+=================================================
+paras: window = 210, stride = 10
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1454 / 1997 = 0.728092138207311
+=================================================
+=================================================
+paras: window = 210, stride = 15
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1451 / 1997 = 0.7265898848272409
+=================================================
+=================================================
+paras: window = 210, stride = 20
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1421 / 1997 = 0.7115673510265398
+=================================================
+=================================================
+paras: window = 210, stride = 25
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1451 / 1997 = 0.7265898848272409
+=================================================
+=================================================
+paras: window = 210, stride = 30
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1448 / 1997 = 0.7250876314471708
+=================================================
+=================================================
+paras: window = 210, stride = 35
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1434 / 1997 = 0.7180771156735103
+=================================================
+=================================================
+paras: window = 210, stride = 40
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1419 / 1997 = 0.7105658487731598
+=================================================
+=================================================
+paras: window = 220, stride = 5
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1446 / 1997 = 0.7240861291937907
+=================================================
+=================================================
+paras: window = 220, stride = 10
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1438 / 1997 = 0.7200801201802705
+=================================================
+=================================================
+paras: window = 220, stride = 15
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1430 / 1997 = 0.7160741111667501
+=================================================
+=================================================
+paras: window = 220, stride = 20
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1432 / 1997 = 0.7170756134201302
+=================================================
+=================================================
+paras: window = 220, stride = 25
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1443 / 1997 = 0.7225838758137206
+=================================================
+=================================================
+paras: window = 220, stride = 30
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1374 / 1997 = 0.6880320480721082
+=================================================
+=================================================
+paras: window = 220, stride = 35
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1426 / 1997 = 0.71407110665999
+=================================================
+=================================================
+paras: window = 220, stride = 40
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1439 / 1997 = 0.7205808713069605
+=================================================
+=================================================
+paras: window = 230, stride = 5
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1430 / 1997 = 0.7160741111667501
+=================================================
+=================================================
+paras: window = 230, stride = 10
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1428 / 1997 = 0.7150726089133701
+=================================================
+=================================================
+paras: window = 230, stride = 15
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1422 / 1997 = 0.7120681021532298
+=================================================
+=================================================
+paras: window = 230, stride = 20
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1399 / 1997 = 0.700550826239359
+=================================================
+=================================================
+paras: window = 230, stride = 25
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1416 / 1997 = 0.7090635953930896
+=================================================
+=================================================
+paras: window = 230, stride = 30
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1377 / 1997 = 0.6895343014521783
+=================================================
+=================================================
+paras: window = 230, stride = 35
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1418 / 1997 = 0.7100650976464697
+=================================================
+=================================================
+paras: window = 230, stride = 40
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1401 / 1997 = 0.7015523284927391
+=================================================
+=================================================
+paras: window = 240, stride = 5
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1416 / 1997 = 0.7090635953930896
+=================================================
+=================================================
+paras: window = 240, stride = 10
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1420 / 1997 = 0.7110665998998498
+=================================================
+=================================================
+paras: window = 240, stride = 15
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1417 / 1997 = 0.7095643465197796
+=================================================
+=================================================
+paras: window = 240, stride = 20
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1411 / 1997 = 0.7065598397596394
+=================================================
+=================================================
+paras: window = 240, stride = 25
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1412 / 1997 = 0.7070605908863294
+=================================================
+=================================================
+paras: window = 240, stride = 30
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1403 / 1997 = 0.7025538307461192
+=================================================
+=================================================
+paras: window = 240, stride = 35
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1410 / 1997 = 0.7060590886329494
+=================================================
+=================================================
+paras: window = 240, stride = 40
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1402 / 1997 = 0.7020530796194292
+=================================================
+=================================================
+paras: window = 250, stride = 5
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1399 / 1997 = 0.700550826239359
+=================================================
+=================================================
+paras: window = 250, stride = 10
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1392 / 1997 = 0.6970455683525288
+=================================================
+=================================================
+paras: window = 250, stride = 15
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1399 / 1997 = 0.700550826239359
+=================================================
+=================================================
+paras: window = 250, stride = 20
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1372 / 1997 = 0.6870305458187281
+=================================================
+=================================================
+paras: window = 250, stride = 25
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1403 / 1997 = 0.7025538307461192
+=================================================
+=================================================
+paras: window = 250, stride = 30
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1341 / 1997 = 0.671507260891337
+=================================================
+=================================================
+paras: window = 250, stride = 35
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1385 / 1997 = 0.6935403104656985
+=================================================
+=================================================
+paras: window = 250, stride = 40
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1381 / 1997 = 0.6915373059589384
+=================================================
+=================================================
+paras: window = 260, stride = 5
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1390 / 1997 = 0.6960440660991487
+=================================================
+=================================================
+paras: window = 260, stride = 10
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1383 / 1997 = 0.6925388082123185
+=================================================
+=================================================
+paras: window = 260, stride = 15
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1384 / 1997 = 0.6930395593390085
+=================================================
+=================================================
+paras: window = 260, stride = 20
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1378 / 1997 = 0.6900350525788683
+=================================================
+=================================================
+paras: window = 260, stride = 25
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1388 / 1997 = 0.6950425638457687
+=================================================
+=================================================
+paras: window = 260, stride = 30
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1357 / 1997 = 0.6795192789183776
+=================================================
+=================================================
+paras: window = 260, stride = 35
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1375 / 1997 = 0.6885327991987982
+=================================================
+=================================================
+paras: window = 260, stride = 40
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1378 / 1997 = 0.6900350525788683
+=================================================
+=================================================
+paras: window = 270, stride = 5
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1373 / 1997 = 0.6875312969454181
+=================================================
+=================================================
+paras: window = 270, stride = 10
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1370 / 1997 = 0.686029043565348
+=================================================
+=================================================
+paras: window = 270, stride = 15
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1376 / 1997 = 0.6890335503254882
+=================================================
+=================================================
+paras: window = 270, stride = 20
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1357 / 1997 = 0.6795192789183776
+=================================================
+=================================================
+paras: window = 270, stride = 25
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1369 / 1997 = 0.685528292438658
+=================================================
+=================================================
+paras: window = 270, stride = 30
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1375 / 1997 = 0.6885327991987982
+=================================================
+=================================================
+paras: window = 270, stride = 35
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1379 / 1997 = 0.6905358037055583
+=================================================
+=================================================
+paras: window = 270, stride = 40
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1358 / 1997 = 0.6800200300450676
+=================================================
+=================================================
+paras: window = 280, stride = 5
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1360 / 1997 = 0.6810215322984476
+=================================================
+=================================================
+paras: window = 280, stride = 10
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1362 / 1997 = 0.6820230345518278
+=================================================
+=================================================
+paras: window = 280, stride = 15
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1368 / 1997 = 0.685027541311968
+=================================================
+=================================================
+paras: window = 280, stride = 20
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1360 / 1997 = 0.6810215322984476
+=================================================
+=================================================
+paras: window = 280, stride = 25
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1353 / 1997 = 0.6775162744116174
+=================================================
+=================================================
+paras: window = 280, stride = 30
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1325 / 1997 = 0.6634952428642964
+=================================================
+=================================================
+paras: window = 280, stride = 35
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1356 / 1997 = 0.6790185277916875
+=================================================
+=================================================
+paras: window = 280, stride = 40
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1362 / 1997 = 0.6820230345518278
+=================================================
+=================================================
+paras: window = 290, stride = 5
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1347 / 1997 = 0.6745117676514772
+=================================================
+=================================================
+paras: window = 290, stride = 10
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1352 / 1997 = 0.6770155232849274
+=================================================
+=================================================
+paras: window = 290, stride = 15
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1349 / 1997 = 0.6755132699048573
+=================================================
+=================================================
+paras: window = 290, stride = 20
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1335 / 1997 = 0.6685027541311968
+=================================================
+=================================================
+paras: window = 290, stride = 25
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1349 / 1997 = 0.6755132699048573
+=================================================
+=================================================
+paras: window = 290, stride = 30
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1330 / 1997 = 0.6659989984977466
+=================================================
+=================================================
+paras: window = 290, stride = 35
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1347 / 1997 = 0.6745117676514772
+=================================================
+=================================================
+paras: window = 290, stride = 40
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1339 / 1997 = 0.6705057586379569
+=================================================
+=================================================
+paras: window = 300, stride = 5
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1332 / 1997 = 0.6670005007511267
+=================================================
+=================================================
+paras: window = 300, stride = 10
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1334 / 1997 = 0.6680020030045067
+=================================================
+=================================================
+paras: window = 300, stride = 15
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1338 / 1997 = 0.6700050075112669
+=================================================
+=================================================
+paras: window = 300, stride = 20
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1340 / 1997 = 0.6710065097646469
+=================================================
+=================================================
+paras: window = 300, stride = 25
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1330 / 1997 = 0.6659989984977466
+=================================================
+=================================================
+paras: window = 300, stride = 30
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1343 / 1997 = 0.6725087631447171
+=================================================
+=================================================
+paras: window = 300, stride = 35
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1336 / 1997 = 0.6690035052578869
+=================================================
+=================================================
+paras: window = 300, stride = 40
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1339 / 1997 = 0.6705057586379569
+=================================================
+=================================================
+paras: window = 310, stride = 5
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1317 / 1997 = 0.6594892338507762
+=================================================
+=================================================
+paras: window = 310, stride = 10
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1321 / 1997 = 0.6614922383575363
+=================================================
+=================================================
+paras: window = 310, stride = 15
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1323 / 1997 = 0.6624937406109164
+=================================================
+=================================================
+paras: window = 310, stride = 20
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1312 / 1997 = 0.656985478217326
+=================================================
+=================================================
+paras: window = 310, stride = 25
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1318 / 1997 = 0.6599899849774662
+=================================================
+=================================================
+paras: window = 310, stride = 30
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1296 / 1997 = 0.6489734601902855
+=================================================
+=================================================
+paras: window = 310, stride = 35
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1324 / 1997 = 0.6629944917376064
+=================================================
+=================================================
+paras: window = 310, stride = 40
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1315 / 1997 = 0.658487731597396
+=================================================
+=================================================
+paras: window = 320, stride = 5
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1308 / 1997 = 0.6549824737105658
+=================================================
+=================================================
+paras: window = 320, stride = 10
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1308 / 1997 = 0.6549824737105658
+=================================================
+=================================================
+paras: window = 320, stride = 15
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1314 / 1997 = 0.657986980470706
+=================================================
+=================================================
+paras: window = 320, stride = 20
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1311 / 1997 = 0.656484727090636
+=================================================
+=================================================
+paras: window = 320, stride = 25
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1301 / 1997 = 0.6514772158237356
+=================================================
+=================================================
+paras: window = 320, stride = 30
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1304 / 1997 = 0.6529794692038057
+=================================================
+=================================================
+paras: window = 320, stride = 35
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1322 / 1997 = 0.6619929894842264
+=================================================
+=================================================
+paras: window = 320, stride = 40
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1319 / 1997 = 0.6604907361041562
+=================================================
+=================================================
+paras: window = 330, stride = 5
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1296 / 1997 = 0.6489734601902855
+=================================================
+=================================================
+paras: window = 330, stride = 10
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1296 / 1997 = 0.6489734601902855
+=================================================
+=================================================
+paras: window = 330, stride = 15
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1300 / 1997 = 0.6509764646970456
+=================================================
+=================================================
+paras: window = 330, stride = 20
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1293 / 1997 = 0.6474712068102153
+=================================================
+=================================================
+paras: window = 330, stride = 25
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1295 / 1997 = 0.6484727090635954
+=================================================
+=================================================
+paras: window = 330, stride = 30
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1312 / 1997 = 0.656985478217326
+=================================================
+=================================================
+paras: window = 330, stride = 35
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1306 / 1997 = 0.6539809714571858
+=================================================
+=================================================
+paras: window = 330, stride = 40
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1294 / 1997 = 0.6479719579369053
+=================================================
+=================================================
+paras: window = 340, stride = 5
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1285 / 1997 = 0.6434651977966951
+=================================================
+=================================================
+paras: window = 340, stride = 10
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1286 / 1997 = 0.6439659489233851
+=================================================
+=================================================
+paras: window = 340, stride = 15
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1298 / 1997 = 0.6499749624436655
+=================================================
+=================================================
+paras: window = 340, stride = 20
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1283 / 1997 = 0.642463695543315
+=================================================
+=================================================
+paras: window = 340, stride = 25
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1288 / 1997 = 0.6449674511767651
+=================================================
+=================================================
+paras: window = 340, stride = 30
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1262 / 1997 = 0.6319479218828242
+=================================================
+=================================================
+paras: window = 340, stride = 35
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1296 / 1997 = 0.6489734601902855
+=================================================
+=================================================
+paras: window = 340, stride = 40
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1294 / 1997 = 0.6479719579369053
+=================================================
+=================================================
+paras: window = 350, stride = 5
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1273 / 1997 = 0.6374561842764146
+=================================================
+=================================================
+paras: window = 350, stride = 10
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1280 / 1997 = 0.6409614421632449
+=================================================
+=================================================
+paras: window = 350, stride = 15
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1275 / 1997 = 0.6384576865297947
+=================================================
+=================================================
+paras: window = 350, stride = 20
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1272 / 1997 = 0.6369554331497246
+=================================================
+=================================================
+paras: window = 350, stride = 25
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1280 / 1997 = 0.6409614421632449
+=================================================
+=================================================
+paras: window = 350, stride = 30
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1271 / 1997 = 0.6364546820230346
+=================================================
+=================================================
+paras: window = 350, stride = 35
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1285 / 1997 = 0.6434651977966951
+=================================================
+=================================================
+paras: window = 350, stride = 40
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1271 / 1997 = 0.6364546820230346
+=================================================
+=================================================
+paras: window = 360, stride = 5
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1266 / 1997 = 0.6339509263895844
+=================================================
+=================================================
+paras: window = 360, stride = 10
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1271 / 1997 = 0.6364546820230346
+=================================================
+=================================================
+paras: window = 360, stride = 15
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1271 / 1997 = 0.6364546820230346
+=================================================
+=================================================
+paras: window = 360, stride = 20
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1262 / 1997 = 0.6319479218828242
+=================================================
+=================================================
+paras: window = 360, stride = 25
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1273 / 1997 = 0.6374561842764146
+=================================================
+=================================================
+paras: window = 360, stride = 30
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1277 / 1997 = 0.6394591887831748
+=================================================
+=================================================
+paras: window = 360, stride = 35
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1269 / 1997 = 0.6354531797696544
+=================================================
+=================================================
+paras: window = 360, stride = 40
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1281 / 1997 = 0.6414621932899349
+=================================================
+=================================================
+paras: window = 370, stride = 5
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1258 / 1997 = 0.6299449173760641
+=================================================
+=================================================
+paras: window = 370, stride = 10
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1256 / 1997 = 0.628943415122684
+=================================================
+=================================================
+paras: window = 370, stride = 15
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1263 / 1997 = 0.6324486730095142
+=================================================
+=================================================
+paras: window = 370, stride = 20
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1257 / 1997 = 0.629444166249374
+=================================================
+=================================================
+paras: window = 370, stride = 25
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1264 / 1997 = 0.6329494241362043
+=================================================
+=================================================
+paras: window = 370, stride = 30
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1241 / 1997 = 0.6214321482223335
+=================================================
+=================================================
+paras: window = 370, stride = 35
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1268 / 1997 = 0.6349524286429644
+=================================================
+=================================================
+paras: window = 370, stride = 40
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1255 / 1997 = 0.628442663995994
+=================================================
+=================================================
+paras: window = 380, stride = 5
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1246 / 1997 = 0.6239359038557837
+=================================================
+=================================================
+paras: window = 380, stride = 10
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1247 / 1997 = 0.6244366549824737
+=================================================
+=================================================
+paras: window = 380, stride = 15
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1245 / 1997 = 0.6234351527290937
+=================================================
+=================================================
+paras: window = 380, stride = 20
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1238 / 1997 = 0.6199298948422634
+=================================================
+=================================================
+paras: window = 380, stride = 25
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1246 / 1997 = 0.6239359038557837
+=================================================
+=================================================
+paras: window = 380, stride = 30
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1240 / 1997 = 0.6209313970956435
+=================================================
+=================================================
+paras: window = 380, stride = 35
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1261 / 1997 = 0.6314471707561342
+=================================================
+=================================================
+paras: window = 380, stride = 40
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1256 / 1997 = 0.628943415122684
+=================================================
+=================================================
+paras: window = 390, stride = 5
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1239 / 1997 = 0.6204306459689535
+=================================================
+=================================================
+paras: window = 390, stride = 10
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1239 / 1997 = 0.6204306459689535
+=================================================
+=================================================
+paras: window = 390, stride = 15
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1239 / 1997 = 0.6204306459689535
+=================================================
+=================================================
+paras: window = 390, stride = 20
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1231 / 1997 = 0.6164246369554331
+=================================================
+=================================================
+paras: window = 390, stride = 25
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1243 / 1997 = 0.6224336504757135
+=================================================
+=================================================
+paras: window = 390, stride = 30
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1241 / 1997 = 0.6214321482223335
+=================================================
+=================================================
+paras: window = 390, stride = 35
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1252 / 1997 = 0.6269404106159239
+=================================================
+=================================================
+paras: window = 390, stride = 40
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1231 / 1997 = 0.6164246369554331
+=================================================
+=================================================
+paras: window = 400, stride = 5
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1235 / 1997 = 0.6184276414621933
+=================================================
+=================================================
+paras: window = 400, stride = 10
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1234 / 1997 = 0.6179268903355033
+=================================================
+=================================================
+paras: window = 400, stride = 15
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1234 / 1997 = 0.6179268903355033
+=================================================
+=================================================
+paras: window = 400, stride = 20
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1221 / 1997 = 0.6114171256885328
+=================================================
+=================================================
+paras: window = 400, stride = 25
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1225 / 1997 = 0.613420130195293
+=================================================
+=================================================
+paras: window = 400, stride = 30
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1215 / 1997 = 0.6084126189283926
+=================================================
+=================================================
+paras: window = 400, stride = 35
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1237 / 1997 = 0.6194291437155733
+=================================================
+=================================================
+paras: window = 400, stride = 40
+1794 32823
+=== Position D00 Begin ===
+3737 63460
+=== Position D01 Begin ===
+3695 64859
+=== Position D03 Begin ===
+3612 62824
+=== Position D02 Begin ===
+1190 13057
+=== Position D04 Begin ===
+----Start Training----
+----End Training----
+acc = 1232 / 1997 = 0.6169253880821232
+=================================================
