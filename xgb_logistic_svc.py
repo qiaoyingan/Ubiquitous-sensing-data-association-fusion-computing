@@ -3,12 +3,11 @@ import random
 import numpy as np
 import pandas as pd
 from xgboost import XGBClassifier
-from sklearn.linear_model import LogisticRegression
-from sklearn.naive_bayes import BernoulliNB
-
+from sklearn import linear_model
+from sklearn import svm
 
 def get_matchdf(device_list, face_list, code_list, window_size, stride):
-    co_appear_dict, dict_Face_window, dict_Imsi_window = {}, {}, {}
+    co_appear_dict = {}
     for _ in range(len(device_list)):  # Each position
 
         start_time = min(face_list[_]['TimeStamp'].iloc[0], code_list[_]['TimeStamp'].iloc[0])
@@ -16,8 +15,8 @@ def get_matchdf(device_list, face_list, code_list, window_size, stride):
         the_end = max(face_list[_]['TimeStamp'].iloc[-1], code_list[_]['TimeStamp'].iloc[-1])
 
         face_len, code_len = len(face_list[_]), len(code_list[_])
-        # print(face_len, code_len)
-        # print("=== Position {} Begin ===".format(device_list[_]))
+        print(face_len, code_len)
+        print("=== Position {} Begin ===".format(device_list[_]))
         face_index, code_index = 0, 0
         start_face, start_code = 0, 0  # record the start index in last window
 
@@ -60,19 +59,19 @@ def get_matchdf(device_list, face_list, code_list, window_size, stride):
 
             for f in faces:
                 for c in codes:
-                    co_appear_dict[(f, c)] = 1 if (f, c) not in co_appear_dict else co_appear_dict[(f, c)] + 1
-                    dict_Face_window[f] = 1 if f not in dict_Face_window else dict_Face_window[f] + 1
-                    dict_Imsi_window[c] = 1 if c not in dict_Imsi_window else dict_Imsi_window[c] + 1
+                    if (f, c) in co_appear_dict:
+                        co_appear_dict[(f, c)] += 1
+                    else:
+                        co_appear_dict[(f, c)] = 1
             # update the window
             start_time += stride
             end_time += stride
             if start_time > the_end:
                 break
-        # print("=== Position {} End ===".format(device_list[_]))
-    return co_appear_dict, dict_Face_window, dict_Imsi_window
+    return co_appear_dict
 
 
-def genFeature(l_TM, face_total, imsi_total, face_window, imsi_window):
+def genFeature(l_TM, face_total, imsi_total):
     # 人脸的总次数
     # df_T = df_Face.groupby('FaceLabel').count().reset_index()[['FaceLabel', 'DeviceID']]
     # df_T.columns = ['FaceLabel', 'countT']  # 计算每一个facelabel出现的次数
@@ -108,17 +107,17 @@ def genFeature(l_TM, face_total, imsi_total, face_window, imsi_window):
         #         f.append(
         #             [l_TM[i][2], face_count1[facelist.index(facelabel)], 0, face_count[facelist.index(facelabel)], 0])
         #     else:
-        f.append([l_TM[i][2], face_total[face], imsi_total[code], face_window[face], imsi_window[code]])
+        f.append([l_TM[i][2], face_total[face], imsi_total[code]])
     return f
 
 
 def score(res):
     for i in range(len(res)):
-        n_pc, n_p, n_c = res[i][0], res[i][3], res[i][4]
+        n_pc, n_p, n_c = res[i][0], res[i][1], res[i][2]
         con_score = 0 if n_pc > n_p or n_pc > n_c else np.log(1 + n_pc) * np.log(1 + n_pc / (n_c - n_pc + 1)) * np.log(
             1 + n_pc / (n_p - n_pc + 2))
         res[i].append(con_score)
-    res1 = [row[0:3] + [row[5]] for row in res]
+    res1 = [row[0:3] + [row[3]] for row in res]
     return res1
 
 
@@ -153,17 +152,16 @@ path_face = train_folder + 'CCF2021_run_record_p_Train.csv'
 dict_label = {}  # dict_label is used to identify the correct person-code relation
 device_list = []  # device_list is used to record all the positions (Dxx)
 face_list, code_list = [], []  # xxxx_list is used to record the info of different positions
-window_size, stride, learning_rate = 100, 20, 0.1  # identify person and code appear in [time, time + window_size] as co-appear
+window_size, stride, learning_rate = 100, 20, 0.2  # identify person and code appear in [time, time + window_size] as co-appear
 co_appear_dict = None
 dict_Face_total, dict_Imsi_total = None, None
 dict_Face_window, dict_Imsi_window = None, None
 
 if __name__ == '__main__':
-
-    window_size, stride, learning_rate = int(sys.argv[1]), int(sys.argv[2]), float(sys.argv[3]) * 0.2
-    sys.stdout = open(f"logs/res.log", "a")
-    print("=================================================")
-    print("paras: window = {}, stride = {}, learning_rate = {}".format(window_size, stride, learning_rate))
+    #window_size, stride, learning_rate = int(sys.argv[1]), int(sys.argv[2]), float(sys.argv[3])
+    #.stdout = open(f"logs/res.log", "a")
+    #print("=================================================")
+    #print("paras: window = {}, stride = {}, learning_rate = {}".format(window_size, stride, learning_rate))
     df_Imsi = pd.read_csv(path_imsi, dtype=str)
     df_Imsi.columns = ['DeviceID', 'Lon', 'Lat', 'Time', 'Code']
     df_Imsi['Time1'] = pd.to_datetime(df_Imsi['Time'])
@@ -191,7 +189,7 @@ if __name__ == '__main__':
     dict_Face_total = df_Face.groupby('FaceLabel').count().to_dict()['DeviceID']
     dict_Imsi_total = df_Imsi.groupby('Code').count().to_dict()['DeviceID']
 
-    co_appear_dict, dict_Face_window, dict_Imsi_window = get_matchdf(device_list, face_list, code_list, window_size,
+    co_appear_dict = get_matchdf(device_list, face_list, code_list, window_size,
                                                                      stride)
     l = len(co_appear_dict)
     co_appear_l = []
@@ -199,35 +197,45 @@ if __name__ == '__main__':
         co_appear_l.append([k[0], k[1], v])
 
     # print("=== Start Generating Feature Matrix ===")
-    matrix = genFeature(co_appear_l, dict_Face_total, dict_Imsi_total, dict_Face_window, dict_Imsi_window)  # 生成关联矩阵
+    matrix = genFeature(co_appear_l, dict_Face_total, dict_Imsi_total)  # 生成关联矩阵
     # print("=== End Generating Feature Matrix ===")
     X = score(matrix)  # 计算关联分数
     y = label1(co_appear_l)  # 计算标签
-    count0 = y.count(0)
-    count1 = y.count(1)
-    scale_pos_weight = int(count0/count1)
     X = np.array(X)
     y = np.array(y)
-
-    # model = BernoulliNB(alpha=0.1)
-
-    # model = LogisticRegression(C=1.0, penalty='l2')
-
+    print('----Start Training----')
     # 用XGB分类器进行分类
-    model = XGBClassifier(scale_pos_weight=scale_pos_weight, learning_rate=learning_rate, random_state=1000)
-    # print('=== Start Training ===')
-    # print(X, y)
-    model.fit(X, y)  # 模型训练
-    # print('=== End Training ===')
+    #XGBmodel = XGBClassifier(scale_pos_weight=100, learning_rate=learning_rate, random_state=1000)
+    #XGBmodel.fit(X, y)  # 模型训练
+    #用逻辑回归进行分类
+    #logistic = linear_model.LogisticRegression(penalty='l2')
+    #logistic.fit(X,y)
+    #用SVM进行分类
+    SVC = svm.SVC(probability=True)
+    SVC.fit(X,y)
+    print('----End Training----')
 
-    probability = model.predict_proba(X)[:, 1]
+    #probability_XGB = XGBmodel.predict_proba(X)[:, 1]
+    #probability_logistic = logistic.predict_proba(X)[:, 1]
+    probability_SVC = SVC.predict_proba(X)[:, 1]
+
     res = pd.DataFrame(co_appear_l, columns=['FaceLabel', 'Code', 'Co_appear'])
-    res['probability'] = pd.Series(probability.tolist())
+    #res['probability_XGB'] = pd.Series(probability_XGB.tolist())
+    #res['probability_logistic'] = pd.Series(probability_logistic.tolist())
+    res['probability_svc'] = pd.Series(probability_SVC.tolist())
 
-    xgb_temp = res.groupby("FaceLabel").apply(lambda t: t[t.probability == t.probability.max()].iloc[0])
-    xgb_temp['label'] = xgb_temp.apply(label, axis=1)
-    precision_xgb = len(xgb_temp[xgb_temp['label'] == 1]) / len(xgb_temp)
-    print("acc = {} / {} = {}".format(len(xgb_temp[xgb_temp['label'] == 1]), len(xgb_temp), str(precision_xgb)))
+    #xgb_temp = res.groupby("FaceLabel").apply(lambda t: t[t.probability_XGB == t.probability_XGB.max()].iloc[0])
+    #logistic_temp = res.groupby("FaceLabel").apply(lambda t: t[t.probability_logistic == t.probability_logistic.max()].iloc[0])
+    svc_temp = res.groupby("FaceLabel").apply(lambda t: t[t.probability_svc == t.probability_svc.max()].iloc[0])
+    #xgb_temp['label'] = xgb_temp.apply(label, axis=1)
+    #logistic_temp['label'] = logistic_temp.apply(label, axis=1)
+    svc_temp['label'] = svc_temp.apply(label, axis=1)
+    #precision_xgb = len(xgb_temp[xgb_temp['label'] == 1]) / len(xgb_temp)
+    #precision_logistic = len(logistic_temp[logistic_temp['label'] == 1]) / len(logistic_temp)
+    precision_svc = len(svc_temp[svc_temp['label'] == 1]) / len(svc_temp)
+    #print("acc = {} / {} = {}".format(len(xgb_temp[xgb_temp['label'] == 1]), len(xgb_temp), str(precision_xgb)))
+    #print("acc = {} / {} = {}".format(len(logistic_temp[logistic_temp['label'] == 1]), len(logistic_temp), str(precision_logistic)))
+    print("acc = {} / {} = {}".format(len(svc_temp[svc_temp['label'] == 1]), len(svc_temp), str(precision_svc)))
     print("=================================================")
 
     # 测试
@@ -256,27 +264,38 @@ if __name__ == '__main__':
     dict_Face_total = df_Face.groupby('FaceLabel').count().to_dict()['DeviceID']
     dict_Imsi_total = df_Imsi.groupby('Code').count().to_dict()['DeviceID']
 
-    co_appear_dict, dict_Face_window, dict_Imsi_window = get_matchdf(device_list, face_list, code_list, window_size,
+    co_appear_dict = get_matchdf(device_list, face_list, code_list, window_size,
                                                                      stride)
     l = len(co_appear_dict)
     co_appear_l = []
     for k, v in co_appear_dict.items():
         co_appear_l.append([k[0], k[1], v])
 
-    matrix = genFeature(co_appear_l, dict_Face_total, dict_Imsi_total, dict_Face_window,
-                        dict_Imsi_window)  # 生成关联矩阵
+    matrix = genFeature(co_appear_l, dict_Face_total, dict_Imsi_total)  # 生成关联矩阵
     X = score(matrix)  # 计算关联分数
     X = np.array(X)
 
     # print('== Start Testing ==')
-    probability = model.predict_proba(X)[:, 1]
-    # print('== End Testing ==')
+    #probability_XGB = XGBmodel.predict_proba(X)[:, 1]
+    #probability_logistic = logistic.predict_proba(X)[:, 1]
+    probability_SVC = SVC.predict_proba(X)[:, 1]
+    print('== End Testing ==')
     res = pd.DataFrame(co_appear_l, columns=['FaceLabel', 'Code', 'Co_appear'])
-    res['probability'] = pd.Series(probability.tolist())
+    #res['probability_XGB'] = pd.Series(probability_XGB.tolist())
+    #res['probability_logistic'] = pd.Series(probability_logistic.tolist())
+    res['probability_svc'] = pd.Series(probability_SVC.tolist())
 
-    xgb_temp = res.groupby("FaceLabel").apply(lambda t: t[t.probability == t.probability.max()].iloc[0])
+    #xgb_temp = res.groupby("FaceLabel").apply(lambda t: t[t.probability_XGB == t.probability_XGB.max()].iloc[0])
+    #logistic_temp = res.groupby("FaceLabel").apply(lambda t: t[t.probability_logistic == t.probability_logistic.max()].iloc[0])
+    svc_temp = res.groupby("FaceLabel").apply(lambda t: t[t.probability_svc == t.probability_svc.max()].iloc[0])
 
-    path_pred = result_folder + "CCF2021_run_pred_EvalB.csv"
-    df_pred = pd.DataFrame(zip(xgb_temp['FaceLabel'], xgb_temp['Code']), columns=['人员编号', '特征码']).sort_values(
-        by=['人员编号'])
-    df_pred.to_csv(path_pred, index=False)
+    #path_pred_XGB = result_folder + "CCF2021_run_pred_EvalB_XGB.csv"
+    #path_pred_logistic = result_folder + "CCF2021_run_pred_EvalB_logistic.csv"
+    path_pred_svc = result_folder + "CCF2021_run_pred_EvalB_svc.csv"
+
+    #df_pred_XGB = pd.DataFrame(zip(xgb_temp['FaceLabel'], xgb_temp['Code']), columns=['人员编号', '特征码']).sort_values(by=['人员编号'])
+    #df_pred_logistic = pd.DataFrame(zip(logistic_temp['FaceLabel'], logistic_temp['Code']), columns=['人员编号', '特征码']).sort_values(by=['人员编号'])
+    df_pred_svc = pd.DataFrame(zip(svc_temp['FaceLabel'], svc_temp['Code']), columns=['人员编号', '特征码']).sort_values(by=['人员编号'])
+    #df_pred_XGB.to_csv(path_pred_XGB, index=False)
+    #df_pred_logistic.to_csv(path_pred_logistic, index=False)
+    df_pred_svc.to_csv(path_pred_svc, index=False)
